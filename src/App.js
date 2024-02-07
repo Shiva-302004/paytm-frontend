@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import AddMoney from './pages/AddMoney';
 import SendAnotheruser from './pages/SendAnotheruser';
+import Hi from './pages/Hi';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       
       <Routes>
         <Route exact path='/' element={<Home/>} />
+        <Route exact path='/hi' element={<Hi/>} />
         <Route exact path='/login' element={<Login/>} />
         <Route exact path='/signup' element={<Signup/>}/>
         <Route exact path='/addmoney' element={<AddMoney/>}/>

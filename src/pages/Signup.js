@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { CiLock } from "react-icons/ci";
 import { MdArrowForwardIos } from "react-icons/md";
 // import image from "../assets/footerlogin.png"
 import { ImCross } from 'react-icons/im';
 const Signup = (props) => {
+  const location=useNavigate()
   const [login, setlogin] = useState({
     email: "",
     password: "",
@@ -29,6 +30,7 @@ const Signup = (props) => {
         localStorage.setItem("token", data.token)
         localStorage.setItem('amount',JSON.stringify(data))
         props.setclickmodalsignup(!props.clickmodalsignup)
+        location("/hi")
       } else {
         console.log("something went wrong")
       }

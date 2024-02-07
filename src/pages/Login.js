@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 // import { FaArrowLeft } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { CiLock } from "react-icons/ci";
 import { MdArrowForwardIos } from "react-icons/md";
 import image from "../assets/footerlogin.png"
 import { ImCross } from 'react-icons/im';
 import { useAmount } from '../context/Contex';
 const Login = (props) => {
-  // const location = useNavigate()
+  const location = useNavigate()
   const { amount, setamount } = useAmount()
   const [login, setlogin] = useState({
     emailphone: "",
@@ -33,6 +33,7 @@ const Login = (props) => {
         setamount({ ...amount, name: data.name, id: data._id, price: data.amount })
         localStorage.setItem('amount', JSON.stringify(data))
         localStorage.setItem('balance',data.amount)
+        location("/hi")
         // console.log(amount)
       } else {
         console.log("something went wrong")

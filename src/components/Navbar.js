@@ -18,6 +18,7 @@ const Navbar = () => {
     const [menu, setmenu] = useState(false)
     const { amount } = useAmount()
     const location = useNavigate()
+    document.title=`paytm:${window.location.pathname}`
     return (
         <div style={{ boxShadow: "0px 1px 8px grey" }} className=''>
             <div className='bg-white text-black h-[50px] md:flex ' >
@@ -30,6 +31,8 @@ const Navbar = () => {
                 <div className={`flex flex-col  mt-[8px] w-[100vw] h-[90vh] ${!click ? "left-[-100%]" : "left-0"} absolute z-10  bg-white items-center text-black md:relative md:flex-row md:w-0 md:z-0 md:h-auto md:left-0 md:ml-[15%] lg:ml-[25%]`} style={{ transition: "ease-in 0.2s" }}>
                     <div className='flex flex-col md:flex-row'>
                         <Link className='ml-4 py-2 font-semibold' to={"/"}>Home</Link>
+                        <hr className='w-[100vw] md:hidden' />
+                        <Link className='ml-4 py-2 font-semibold' to={"/hi"}>Hi</Link>
                         <hr className='w-[100vw] md:hidden' />
                         <Link className='ml-4 py-2 font-semibold' to={"/about"} >Company</Link>
                         <hr className='w-[100vw] md:hidden' />
@@ -85,6 +88,8 @@ const Navbar = () => {
                     <hr className=''/>
                     <Link className='ml-4 py-2 font-semibold md:mt-12' to={"/"}>Home</Link>
                     <hr className='w-[100vw] md:hidden' />
+                    <Link className='ml-4 py-2 font-semibold' to={"/hi"} >hi</Link>
+                    <hr className='w-[100vw] md:hidden' />
                     <Link className='ml-4 py-2 font-semibold' to={"/about"} >Company</Link>
                     <hr className='w-[100vw] md:hidden' />
                     <Link className='ml-4 py-2 font-semibold' to={"/about"} >Company</Link>
@@ -95,7 +100,7 @@ const Navbar = () => {
                     <hr className='w-[100vw] md:hidden' />
                     <Link className='ml-4 py-2 font-semibold md:w-[180px]' to={"/about"} >Investors Relation</Link>
                     <hr className='w-[100vw] md:hidden' />
-                    <Link className='ml-4 py-2 font-semibold' onClick={() => { localStorage.removeItem('token'); localStorage.removeItem('amount'); localStorage.removeItem('balance');localStorage.removeItem('username');setmenu(!menu); location("/login") }} >Logout</Link>
+                    <Link className='ml-4 py-2 font-semibold' onClick={() => { localStorage.removeItem('token'); localStorage.removeItem('amount'); localStorage.removeItem('balance');localStorage.removeItem('username');setmenu(!menu); location("/hi") ;window.location.reload()}} >Logout</Link>
                     <hr className='w-[100vw] md:hidden' />
                 </div>
                 <div className='md:absolute md:bottom-0 md:visible md:h-[5vh] md:z-10 mb-0'>
