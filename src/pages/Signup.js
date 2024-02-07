@@ -30,7 +30,7 @@ const Signup = (props) => {
         localStorage.setItem("token", data.token)
         localStorage.setItem('amount',JSON.stringify(data))
         props.setclickmodalsignup(!props.clickmodalsignup)
-        location("/hi")
+        location("/")
       } else {
         console.log("something went wrong")
       }

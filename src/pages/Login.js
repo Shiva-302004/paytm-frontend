@@ -33,7 +33,7 @@ const Login = (props) => {
         setamount({ ...amount, name: data.name, id: data._id, price: data.amount })
         localStorage.setItem('amount', JSON.stringify(data))
         localStorage.setItem('balance',data.amount)
-        location("/hi")
+        location("/")
         // console.log(amount)
       } else {
         console.log("something went wrong")
