@@ -28,7 +28,7 @@ const SendAnotheruser = () => {
             },
             body:JSON.stringify(deposit)
         }).then((res)=>res.json()).then((data)=>{
-            console.log(data)
+            // console.log(data)
             if(data.success){
                 // console.log(data)
                 setmodal(!modal)

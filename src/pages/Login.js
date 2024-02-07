@@ -26,7 +26,7 @@ const Login = (props) => {
       },
       body: JSON.stringify(login)
     }).then(data => data.json()).then((data) => {
-      console.log(data)
+      // console.log(data)
       if (data.success) {
         localStorage.setItem("token", data.token)
         props.setclickmodal(!props.clickmodal)
