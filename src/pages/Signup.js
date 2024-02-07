@@ -35,8 +35,8 @@ const Signup = (props) => {
     })
   }
   return (
-    <div className='z-12 bg-yellow-50  border border-blue-50 h-[100vh]  md:absolute md:h-[80vh] md:top-[20%] md:left-[25%] md:w-[60vw]' style={{ boxShadow: "2px 2px 3px grey" }}>
-      <div className=' absolute right-0 mt-1 mr-1 '>
+    <div className='z-20 absolute bg-yellow-50  border border-blue-50 h-[100vh] w-[100vw] top-0 md:absolute md:h-[80vh] md:top-[20%] md:left-[25%] md:w-[60vw]' style={{ boxShadow: "2px 2px 3px grey" }}>
+      <div className=' absolute right-1 mt-1 mr-1 '>
         <ImCross onClick={() => props.setclickmodalsignup(!props.clickmodalsignup)} />
       </div>
       <div className='flex flex-col justify-center  p-4 mt-[30px] md:mt-0'>

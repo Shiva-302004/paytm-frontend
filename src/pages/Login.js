@@ -40,8 +40,8 @@ const Login = (props) => {
     })
   }
   return (
-    <div className='z-12 bg-yellow-50  border border-blue-50 h-[90vh]  md:absolute md:h-[60vh] md:top-[20%] md:left-[25%] md:w-[60vw]' style={{ boxShadow: "2px 2px 3px grey" }}>
-      <div className=' absolute right-0 mt-1 mr-1 '>
+    <div className='absolute z-20  bg-yellow-50  border border-blue-50 h-[100vh] w-[100vw] top-0 md:absolute md:h-[60vh] md:top-[20%] md:left-[25%] md:w-[60vw]' style={{ boxShadow: "2px 2px 3px grey" }}>
+      <div className=' absolute mt-1 mr-1 right-1 '>
         <ImCross onClick={() => props.setclickmodal(!props.clickmodal)} />
       </div>
       <div className='flex flex-col justify-center  p-4 mt-[30px] md:mt-0'>
@@ -55,7 +55,7 @@ const Login = (props) => {
         <span className='mt-3 text-[15px]'>By signing in, you agree to our <span className='text-[#00b9f5] '>privacy policy </span> and <span className='text-[#00b9f5]'> terms of use</span></span>
         <span className='mt-3 text-[15px]'>Dont have an account ? <Link onClick={() => { props.setclickmodalsignup(!props.clickmodalsignup); props.setclickmodal(!props.clickmodal) }} className='text-[#00b9f5]'> SignUp</Link></span>
       </div>
-      <div className=' bottom-0 absolute '><img className='w-[100vw] md:h-[10vh]' src={image} alt="" /></div>
+      <div className=' bottom-0 absolute '><img className='w-[0vw] md:h-[10vh] md:w-[100vw]' src={image} alt="" /></div>
     </div>
   )
 }

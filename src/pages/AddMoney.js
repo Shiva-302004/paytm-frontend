@@ -1,17 +1,17 @@
 import React, { useState } from 'react'
 import img from "../assets/banner.png"
 import img1 from "../assets/paymentbank.png"
-import { useAmount } from '../context/Contex'
+// import { useAmount } from '../context/Contex'
 import { Link } from 'react-router-dom'
 import { FaRupeeSign } from "react-icons/fa";
 import { ImCross } from 'react-icons/im'
 // const defaultdata={upipin:""}
 const AddMoney = () => {
-    const {amount}=useAmount()
+    // const {amount}=useAmount()
     const [deposit,setdeposit]=useState({deposit:0,upipin:""})
     const [modal,setmodal]=useState(false)
     const [modalimage,setmodalimage]=useState(false)
-    const [balance,setbalance]=useState("")
+    // const [balance,setbalance]=useState("")
     const [balanced,setbalanced]=useState()
     const onChange=(e)=>{
         setdeposit({...deposit,[e.target.name]:e.target.value})
@@ -31,7 +31,7 @@ const AddMoney = () => {
             if(data.success){
                 setmodal(!modal)
                 setdeposit({...deposit,upipin:"",deposit:0})
-                setbalance(data.data.amount)
+                // setbalance(data.data.amount)
                 localStorage.setItem("balance",data.data.amount)
                 setmodalimage(!modalimage)
             }

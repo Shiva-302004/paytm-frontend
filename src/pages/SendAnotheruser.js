@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import img from "../assets/banner.png"
 import img1 from "../assets/paymentbank.png"
-import { useAmount } from '../context/Contex'
+// import { useAmount } from '../context/Contex'
 import { Link } from 'react-router-dom'
 import { FaRupeeSign } from "react-icons/fa";
 import { ImCross } from 'react-icons/im'
 import { useParams } from 'react-router-dom'
 const SendAnotheruser = () => {
-    const {amount}=useAmount()
+    // const {amount}=useAmount()
     const [deposit,setdeposit]=useState({deposit:0,upipin:""})
     const [modal,setmodal]=useState(false)
     const [modalimage,setmodalimage]=useState(false)

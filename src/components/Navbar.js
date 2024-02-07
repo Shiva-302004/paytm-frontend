@@ -63,7 +63,7 @@ const Navbar = () => {
                         <Login clickmodal={clickmodal} setclickmodal={setclickmodal} clickmodalsignup={clickmodalsignup} setclickmodalsignup={setclickmodalsignup} />
                     </div>
                         :
-                        <div className={`${!clickmodalsignup ? "hidden" : "visible"} ${clickmodalsignup ? (document.body.style.background = "grey") : document.body.style.background = "white"}  mt-9`}>
+                        <div className={`${!clickmodalsignup ? "hidden" : "visible"} ${clickmodalsignup ? (document.body.style.background = "grey"  ) : (document.body.style.background = "white")}  `}>
                             <Signup clickmodalsignup={clickmodalsignup} setclickmodalsignup={setclickmodalsignup} clickmodal={clickmodal} setclickmodal={setclickmodal} />
                         </div>
                 }
